@@ -370,7 +370,7 @@ class ModelService():
     
     return (grid_search_likes,grid_search_retweets)
 
-  def predict(self,new_tweet,model,type="misc"):
+  def predict(self,new_tweet,type,model):
                 
     new_tweet_df = pd.DataFrame({'Tweet': [new_tweet], 'Type': [type]})
     

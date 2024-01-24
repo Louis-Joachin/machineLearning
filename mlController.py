@@ -14,10 +14,10 @@ def read_root():
         
 @app.get("/MachineLearning/predict")
 def read_item(tweet : str):
-    ms.predict(model[0],model[1],tweet)
-    
+    ms.predict(new_tweet=tweet,type="misc",model=model)  
+      
 @app.get("/MachineLearning/predict")
 def read_item(tweet : str,style : str):
-    ms.predict(model[0],model[1],tweet,style)
+    ms.predict(new_tweet=tweet,type=style,model=model)
     
         
